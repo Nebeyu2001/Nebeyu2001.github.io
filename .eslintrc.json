@@ -29,7 +29,7 @@
         "id-length": [
             "error",
             {
-                "min": 3,
+                "min": 1,
                 "max": 30,
                 "exceptions": [
                     "i",
@@ -48,7 +48,7 @@
             "error"
         ],
         "require-jsdoc": [
-            "error",
+            "off",
             {
                 "require": {
                     "FunctionDeclaration": true,

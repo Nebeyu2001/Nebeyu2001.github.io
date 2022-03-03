@@ -1,16 +1,16 @@
 "use strict";
 /* global assert    */
 /* comment out the node specific code when going to the browser*/
-const assert = require("assert");  //always need this with node
-const myExports = require("./methods.js");  //with node need the name of your file with your functions here
-const groupById = myExports.groupById;  //do this for all of the functions used in the Mocha tests
-const unique = myExports.unique;
-const filterRangeInPlace = myExports.filterRangeInPlace;
-const filterRange = myExports.filterRange;
-const Calculator = myExports.Calculator;
+// const assert = require("assert");  //always need this with node
+// const myExports = require("./methods.js");  //with node need the name of your file with your functions here
+// const groupById = myExports.groupById;  //do this for all of the functions used in the Mocha tests
+// const unique = myExports.unique;
+// const filterRangeInPlace = myExports.filterRangeInPlace;
+// const filterRange = myExports.filterRange;
+// const Calculator = myExports.Calculator;
 
 
-    
+
 
 /*
 Write a function filterRange(arr, a, b) that gets an array arr, looks for elements with values higher or equal to a and lower or equal to b and return a result as an array.
@@ -94,24 +94,24 @@ Such function is really handy when working with server data.
 In this task we assume that id is unique. There may be no two array items with the same id.
 Please use array .reduce method in the solution.
 */
-describe("groupById", function() {
+describe("groupById", function () {
 
-    it("creates an object grouped by id", function() {
-      let users = [
-        {id: 'john', name: "John Smith", age: 20},
-        {id: 'ann', name: "Ann Smith", age: 24},
-        {id: 'pete', name: "Pete Peterson", age: 31},
-      ];
-  
-      assert.deepEqual(groupById(users), {
-        john: {id: 'john', name: "John Smith", age: 20},
-        ann: {id: 'ann', name: "Ann Smith", age: 24},
-        pete: {id: 'pete', name: "Pete Peterson", age: 31},
-      });
+    it("creates an object grouped by id", function () {
+        let users = [
+            { id: 'john', name: "John Smith", age: 20 },
+            { id: 'ann', name: "Ann Smith", age: 24 },
+            { id: 'pete', name: "Pete Peterson", age: 31 },
+        ];
+
+        assert.deepEqual(groupById(users), {
+            john: { id: 'john', name: "John Smith", age: 20 },
+            ann: { id: 'ann', name: "Ann Smith", age: 24 },
+            pete: { id: 'pete', name: "Pete Peterson", age: 31 },
+        });
     });
-  
-    it("works with an empty array", function() {
-      const users = [];
-      assert.deepEqual(groupById(users), {});
+
+    it("works with an empty array", function () {
+        const users = [];
+        assert.deepEqual(groupById(users), {});
     });
-  });
+});

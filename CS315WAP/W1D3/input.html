@@ -1,0 +1,35 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <p>when "click to add" button is clicked -> text typed inside input appended to output and then input cleared</p>
+
+    <p>Input</p>
+    <p><input id="info" type="text" value="" /></p>
+
+    <p>Output</p>
+    <p><textarea id="outInfo" type="text" value="" rows="4" cols="20"></textarea></p>
+
+    <p><input type="button" value="click to add" onclick="add()" />
+
+    </p>
+    <script>
+        function add() {
+            //Get Element By Id
+            let inputInfo = document.getElementById("info");
+
+            //Copy the input to 
+            let outPutInfo = document.getElementById("outInfo");
+            outPutInfo.value = inputInfo.value;
+            inputInfo.value = ""
+        }
+
+    </script>
+
+</body>
+
+
+</html>

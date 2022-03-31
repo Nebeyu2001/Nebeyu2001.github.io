@@ -1,0 +1,115 @@
+<html>
+
+<head>
+
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            margin: 10px;
+        }
+
+        td,
+        th {
+            border: 1px solid;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        div {
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h2>Inventory</h2>
+
+    <p>Item Name</p>
+    <p><input id="iName" type="text" value="" /></p>
+
+    <p>Item Category</p>
+    <p><input id="iCategory" type="text" value="" /></p>
+
+    <p>Quantity</p>
+    <p><input id="quan" type="text" value="" /></p>
+
+
+    <div><input type="button" value="Add" onclick="add()" /> </div>
+
+    <!-- <p>Result</p>
+    <p><textarea id="res" type="text" value="" rows="4" cols="10"></textarea></p> -->
+
+
+    <table id="tab">
+        <tr>
+            <th>Product Name </th>
+            <th>Category</th>
+            <th>Quantity</th>
+        </tr>
+        <tr>
+            <td>Computer</td>
+            <td>Digital</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>Megazine</td>
+            <td>Convenience</td>
+            <td>1000</td>
+        </tr>
+        <tr>
+            <td>Books</td>
+            <td>Education</td>
+            <td>20</td>
+        </tr>
+
+    </table>
+
+
+
+    <script>
+        function add() {
+            //Get Element By Id
+            let table = document.getElementById("tab");
+            let itemName = document.getElementById("iName").value;
+
+            //Copy the input to 
+            let itemCategory = document.getElementById("iCategory").value;
+
+            let quantity = document.getElementById("quan").value;
+
+
+            const tr = document.createElement("tr");
+            table.append(tr);
+            const td1 = document.createElement("td")
+            tr.append(td1);
+            td1.innerText = itemName;
+
+            const td2 = document.createElement("td")
+            tr.append(td2);
+            td2.innerText = itemCategory
+
+            const td3 = document.createElement("td")
+            tr.append(td3);
+            td3.innerText = quantity;
+
+
+
+        }
+
+
+
+
+    </script>
+
+</body>
+
+
+</html>

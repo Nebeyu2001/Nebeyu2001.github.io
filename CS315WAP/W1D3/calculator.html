@@ -1,0 +1,73 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <p>when "click to add" button is clicked -> text typed inside input appended to output and then input cleared</p>
+
+    <p>First Value</p>
+    <p><input id="fValue" type="text" value="" /></p>
+
+    <p>Second Value</p>
+    <p><input id="sValue" type="text" value="" /></p>
+
+    <p>Operations:</p>
+
+    <span><input type="button" value="+" onclick="add()" /> </span>
+    <span><input type="button" value="-" onclick="subtract()" /> </span>
+    <span><input type="button" value="*" onclick="multiply()" /> </span>
+
+    <p>Result</p>
+    <p><textarea id="res" type="text" value="" rows="4" cols="10"></textarea></p>
+
+
+
+
+    <script>
+        function add() {
+            //Get Element By Id
+            let firstValue = document.getElementById("fValue").value;
+
+            //Copy the input to 
+            let secondValue = document.getElementById("sValue").value;
+
+            document.getElementById("res").value = Number(firstValue) + Number(secondValue)
+
+        }
+
+        function subtract() {
+
+            //Get Element By Id
+            let firstValue = document.getElementById("fValue").value;
+
+            //Copy the input to
+            let secondValue = document.getElementById("sValue").value;
+
+
+
+            document.getElementById("res").value = Number(firstValue) - Number(secondValue);
+        }
+
+        function multiply() {
+
+            //Get Element By Id
+            let firstValue = document.getElementById("fValue").value;
+
+
+            let secondValue = document.getElementById("sValue").value;
+
+
+
+            document.getElementById("res").value = Number(firstValue) * Number(secondValue);
+        }
+
+
+
+    </script>
+
+</body>
+
+
+</html>

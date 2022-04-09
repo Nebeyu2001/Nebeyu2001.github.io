@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="Style.css">
+    <script src="invent.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <h1>Inventory</h1>
+    <div>
+        <p>
+            Item Name: &nbsp; &nbsp; &nbsp;
+            <input type="text" value="" id="itemName" />
+        </p>
+        <p>
+            Item Category: &nbsp;
+            <input type="text" value="" id="category" />
+        </p>
+        <p>
+            Quantity: &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+            <input type="text" value="" id="quantity" />
+        </p>
+        <p>
+            Rating: &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+            <input type="text" value="" id="rating" />
+        </p>
+        <p>
+            <input type="submit" value="Add" class="addButton" onclick="add()" />
+        </p>
+
+        <select name="sort">
+            <option selected>sort By Name</option>
+            <option>sort By Quantity</option>
+        </select>
+        <select name="filter">
+            <option selected>FilterQ >100</option>
+            <option> clear Filter</option>
+
+        </select>
+        <input type="submit" value="Rating Filter" onclick="ratingFilter()" />
+        <!-- <input type="submit" value="filter" onclick="filter()" />
+        <input type="submit" value="Clear Filter" onclick="clearFilter()" />
+        <input type="submit" value="sort by name" onclick="sortByName()" />
+        <input type="submit" value="sort by quantity" onclick="sortByQuantity()" />
+        <br /> -->
+    </div>
+    <table id="items">
+        <tr>
+            <th>Product Name</th>
+            <th>Category</th>
+            <th>Quantity</th>
+            <th>Rating</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </table>
+
+</body>
+
+</html>

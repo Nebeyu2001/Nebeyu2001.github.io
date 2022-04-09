@@ -3,6 +3,8 @@ body{
     background-color:whitesmoke;
 }
 
+div>p
+
 .heading {
     background-color:rgba(36, 99, 81, 0.101);;
 }
@@ -29,6 +31,12 @@ body{
     float: right;
     font-weight: bold;
 
+}
+
+footer{
+
+    padding-bottom: 5px;
+    bottom: -70px;
 }
 
 .left-headers span {

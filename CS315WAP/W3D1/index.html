@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      background-color: black;
+      border: 5px solid grey;
+      
+      
+    }
+
+    .gridContainer{
+      
+      display: grid;
+      grid-template-columns: 1fr 1fr 0.6fr;
+      padding:80px;
+      padding-bottom:30px;
+      padding-top: 40px;
+      gap: 30px;
+      height: fit-content;
+    }
+
+    .footerContainer{
+
+      display:flex;
+      justify-content: space-between;
+
+    }
+
+    .innerFooter{
+
+      display: flex;
+      width:45%;
+      justify-content: space-around;
+      padding-left: 70px;
+    }
+
+    .sendBox{
+
+      display: flex;
+      border: 1px solid grey;
+      background-color:rgb(53, 45, 60);
+      justify-content:space-between;
+      border-radius: 50px;
+      padding: px;
+
+    }
+
+    .sendLabel{
+
+     background-color: orange;
+      border-radius: 50px;
+      padding: 10px 20px;
+
+
+    }
+
+    .emailLabel{
+      padding: 10px;
+    }
+
+    .tweets{
+
+      display: grid;
+      grid-template-columns: 1fr 6fr;
+      gap: 2px;
+    }
+
+    .tweets>p{
+
+      font-style: italic;
+    }
+
+   
+    .instagram{
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      height: 80%;
+
+    }
+
+   
+    img{
+
+      background-color: orange;
+    }
+
+    .twitterIcon{
+
+    background-color: white;
+    }
+
+
+    .image{
+
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    label,
+    p,
+    h2{
+      color: white;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="gridContainer">
+        <div class="article item-1">
+          <h2>About us</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non minima
+            itaque magni atque quae at odit earum ipsa labore quasi porro
+            dolorem obcaecati, reprehenderit eveniet incidunt, consequuntur sint
+            totam officia?
+          </p>
+          <p>
+            <img src="phone.png" alt="phone" width:5px height="10px" />
+            <label for="">+12913912329</label>
+          </p>
+          <p>
+            <img src="mail.png" alt="mail" width: 5px height=10px/>
+            <label for="">info@gmail.com</label>
+          </p>
+          <br />
+
+          <div class="sendBox">
+            <label class="emailLabel"> Enter your e-mail</label>
+            <label class="sendLabel">Send</label>
+          </div>
+        </div>
+        <div class="article item-2">
+          <h2>Latest Tweet</h2>
+          <div class="tweets">
+            <p><img src="twitter.png" alt=""width: 5px height=10px class="twitterIcon"></p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ab
+              deleniti expedita nemo hic quasi adipisci suscipit cumque minus,
+              accusantium tempore esse natus accusamus consequatur odit placeat
+              libero ratione molestiae?
+            </p>
+            <p><img src="twitter.png" alt=""width: 5px height=10px class="twitterIcon"></p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+              nesciunt expedita laboriosam adipisci est, optio voluptas soluta
+              vero velit obcaecati! Ipsa vel itaque reiciendis dolorum velit
+              adipisci consectetur. Asperiores, tempora.
+            </p>
+            <p><img src="twitter.png" alt=""width: 5px height=10px class="twitterIcon"></p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum
+              fugit blanditiis reiciendis corporis, est ex tenetur nulla non
+              nesciunt recusandae quos saepe reprehenderit nostrum eos dolorem,
+              ea ipsum voluptates similique.
+            </p>
+          </div>
+        </div>
+        <div class="article item-3">
+          <h2>Instagram</h2>
+          <div class="instagram">
+            <img src="image1.jpg" alt="" class="image" />
+            <img src="image2.jpg" alt="" class="image" />
+            <img src="image3.jpg" alt="" class="image" />
+            <img src="image4.jpg" alt="" class="image" />
+          </div>
+        </div>
+      </div>
+
+      <p> <hr style="margin:0px 80px"> </p>
+      <div class="footerContainer">
+        <div class="innerFooter">
+          <p>Home</p>
+          <p>About</p>
+          <p>Our works</p>
+          <p>Services</p>
+          <p>Blog</p>
+          <p>Contacts</p>
+
+        </div>
+        <p style="padding-right: 100px;">Colorlib</p>
+
+
+      </div>
+    </div>
+    <p>
+      <a href="https://validator.w3.org/check/referer">Validate</a>
+    </p>
+  </body>
+</html>

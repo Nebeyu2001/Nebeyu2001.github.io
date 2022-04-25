@@ -62,8 +62,8 @@ function generateList(root) {
   return linkedList;
 }
 
-let linkedList = generateList(abe);
-// console.log(linkedList);
+//let linkedList = generateList(abe);
+console.log(generateList(abe));
 
 //5
 function findListNode(list, node) {

@@ -37,7 +37,7 @@ function allLeafNodes(json) {
   }
   return leaves;
 }
-// console.log(allLeafNodes(json));
+//console.log(allLeafNodes(json));
 function countKeys(json) {
   if (Array.isArray(json) || typeof json != "object") return 1;
   let count = 1;
@@ -46,7 +46,7 @@ function countKeys(json) {
   }
   return count;
 }
-// console.log(countKeys(simpleObject));
+console.log(countKeys(simpleObject));
 
 function findAllKeysWithGivenValue(json, givenValue) {
   if (json == null) return;
@@ -68,7 +68,7 @@ function findAllKeysWithGivenValue(json, givenValue) {
   return matches;
 }
 
-console.log(findAllKeysWithGivenValue(simpleObject, 1));
+console.log(findAllKeysWithGivenValue(simpleObject, 2));
 function findAllMatchingKeys(json, givenKey) {
   if (Array.isArray(json) || typeof json != "object") return [];
   let matchingKeys = [];

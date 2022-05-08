@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+        document.getElementById("btn1").onclick = add;
+      };
+
+      function add() {
+        firstValue = document.getElementById("input1").value;
+        secondValue = document.getElementById("input2").value;
+        if (isNaN(firstValue)) {
+          alert("Only Numbers are allowed");
+          document.getElementById("input1").value = "";
+        }
+
+        if (isNaN(secondValue)) {
+          alert("Only Numbers are allowed");
+          document.getElementById("input2").value = "";
+        }
+
+        document.getElementById("output").value =
+          Number(firstValue) + Number(secondValue);
+      }
+    </script>
+  </head>
+  <body>
+    <input id="input1" type="text" value="" />
+    <input id="input2" type="text" value="" />
+    <button id="btn1">submit</button>
+    <input id="output" type="text" value="" />
+  </body>
+</html>

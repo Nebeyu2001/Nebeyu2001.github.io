@@ -38,19 +38,25 @@ class Student {
     return db.find((user) => user.id === id);
   }
 
-  static getAll() {}
+  static getAll() {
+    return db;
+  }
 
-  deleteById(id) {}
+  static deleteById(id) {
+    const stuIndex = db.findIndex((user) => user.id === id);
+    return db.splice(stuIndex, 1);
+  }
 }
 
 new Student(4, "Tina", "Xing").save(); //save to db
 
 new Student(4, "Miss", "Xing").edit(); //edit studentId with id=4
 
-console.log(db);
-
-// Student.deleteById(4); //remove studentId=4 from db
+Student.deleteById(4); //remove studentId=4 from db
+// console.log(db);
 
 // Student.getAll(); //return db;
+console.log(Student.getAll());
 
-// Student.getById(1); //return {id:1, fname: 'John', lname: 'Smith'}
+Student.getById(1); //return {id:1, fname: 'John', lname: 'Smith'}
+console.log(Student.getById(3));

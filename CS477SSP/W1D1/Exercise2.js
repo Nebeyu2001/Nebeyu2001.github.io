@@ -52,8 +52,8 @@ new Student(4, "Tina", "Xing").save(); //save to db
 
 new Student(4, "Miss", "Xing").edit(); //edit studentId with id=4
 
-// Student.deleteById(4); //remove studentId=4 from db
-// console.log(db);
+Student.deleteById(4); //remove studentId=4 from db
+console.log(db);
 
 // Student.getAll(); //return db;
 console.log(Student.getAll());

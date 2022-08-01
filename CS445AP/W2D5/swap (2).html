@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+        document.getElementById("btn1").onclick = swap;
+      };
+      function swap() {
+        let firstPic = document.getElementById("img1");
+        let secondPic = document.getElementById("img2");
+        firstPicSRC = firstPic.src;
+        secondPicSRC = secondPic.src;
+        firstPic.src = secondPicSRC;
+        secondPic.src = firstPicSRC;
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <img id="img1" src="https://picsum.photos/id/10/200/300" alt="" />
+      <button id="btn1" on>swap</button>
+      <img id="img2" src="https://picsum.photos/id/50/200/300" alt="" />
+    </div>
+  </body>
+</html>

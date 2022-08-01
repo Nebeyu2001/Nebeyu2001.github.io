@@ -1,0 +1,36 @@
+Q1: Explain why do we want sometimes to use setImmediate instead of using setTimeout?
+
+  setImmediate() is designed to execute a script once the current poll phase completes.it runs in check phase.
+
+  setTimeout() schedules a script to be run after a minimum threshold in ms has elapsed.it runs in timer phase.
+
+Q2: Explain the difference between process.nextTick and setImmediate?
+    
+    process.nextTick() isnot part of the event loop, not provided by libuv, it natively exists in NodeJs where as
+
+    setImmediate() is part of the eventloop, which is provided by libuv.
+
+    process.nextTick() next-tick-queue completely drained on each pass of the event where as setImmediate runs in check phase
+
+    after I/O events callbacks
+
+    process.nextTick() runs before any additional I/O events or timers fire in susequent ticks of event loop, and has highest 
+
+    priority.
+
+Q3. Name 10 global modules/methods available in Node environment.
+
+    module
+    require
+    process
+    request
+    setImmediate(callback[,...args])
+    setTimeout(callback,delay)
+    setInterval(callback,delay)
+    crypto
+    event
+    fetch
+    exports
+    performance
+
+

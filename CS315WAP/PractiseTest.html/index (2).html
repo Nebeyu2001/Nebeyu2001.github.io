@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plants</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+
+    <!-- <script src="myJavas.js" type="text"></script> -->
+    <style>
+      body > div {
+        margin: 10px;
+      }
+
+      label + label {
+        margin-left: 50px;
+      }
+
+      select {
+        padding: 30px;
+      }
+    </style>
+
+    <script>
+      let plantArray = [];
+      let sourceBox;
+      let destinationBox;
+      window.onload = function () {
+        sourceBox = document.getElementById("sourceArea")[0];
+        destinationBox = document.getElementById("destinationArea")[0];
+        document.getElementById("btn1").onclick = add;
+        document.getElementById("forward").onclick = moveToDestination;
+        document.getElementById("backword").onclick = moveToSource;
+      };
+
+      function add() {
+        let plantName = document.getElementById("input1");
+        plantArray.push(plantName.value);
+        //sourceBox = document.getElementById("sourceArea");
+        let option = document.createElement("option");
+        option.innerHTML = plantName.value;
+        sourceBox.append(option);
+        plantName.value = "";
+      }
+
+      function moveToDestination() {
+        //let sourceBox= document.getElementById("sourceArea");
+        console.log(sourceBox);
+        console.log(sourceBox.options);
+        let selectedOption = [];
+        for (let option of sourceBox.options) {
+          console.log(option, option.innerHTML);
+          if (option.selected) {
+            selectedOption.push(option);
+          }
+        }
+
+        for (let option of selectedOption) {
+          destinationBox.append(option);
+        }
+      }
+
+      function moveToSource() {}
+    </script>
+  </head>
+  <body>
+    <div>
+      <label id="addplant">Add Plant</label><br /><br />
+
+      <label id="">Plant Name:</label>
+      <input type="text" id="input1" class="first" value="" />
+      <button id="btn1" class="first">Add</button>
+    </div>
+    <br />
+
+    <div>
+      <label for="source">Source</label>
+      <label for="Destination">Destination</label>
+    </div>
+
+    <div>
+      <select name="source" id="sourceArea" size="5" value="" multiple>
+        <option>Oak</option>
+        <option>willow</option>
+        <option>chestnut</option>
+      </select>
+      <button id="forward">></button>
+      <button id="backword"><</button>
+      <select name="destination" id="destinationArea" size="5">
+        <option>maple</option>
+      </select>
+    </div>
+
+    <div>
+      <button id="sortbtn">Sort</button>
+    </div>
+  </body>
+</html>

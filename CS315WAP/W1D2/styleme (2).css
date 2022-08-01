@@ -1,0 +1,47 @@
+.intro {
+ 
+    color: rgb(140, 0, 255);
+    font: Verdana;
+    size: 10px;
+
+}
+span{
+    color: yellow;
+}
+p{
+    color:white;
+
+}
+.pp::first-letter{
+    font-size: 1.5cm;
+}
+
+h2 {
+    color: orange;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+
+}
+
+*{
+    background-color: gray;
+}
+
+.A1{
+    color: red;
+    text-decoration: none;
+
+}
+.A1:hover{
+    text-decoration: underline;
+}
+
+ul > li{
+    color: white;
+}
+
+ol > li{
+
+    color:white
+}

@@ -1,0 +1,18 @@
+#text-dark mb-0{
+    text-align: center;
+}
+
+body{
+   background-image: url("../images/Twitter_Logo_new.png");
+   background-size: 100rem;
+  
+ 
+  
+}
+.form-inline{
+    display:flex;
+}
+
+.btn btn-info{
+    margin-left: auto
+}
